@@ -1,0 +1,75 @@
+/* ===================================================
+   rtl.css
+   Additional RTL fine-tuning
+   =================================================== */
+
+/* General direction */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Navbar items */
+.navbar-nav {
+    direction: rtl;
+}
+
+.navbar-badge {
+    right: auto;
+    left: 5px;
+}
+
+/* Card */
+.card-header > .card-tools {
+    float: left;
+}
+
+/* Tables */
+.table th, .table td {
+    text-align: right;
+}
+
+/* Forms */
+.form-group label {
+    text-align: right;
+    display: block;
+}
+
+/* Pagination */
+.pagination {
+    direction: ltr;
+}
+
+/* Alerts */
+.alert-dismissible .close {
+    left: 0;
+    right: auto;
+}
+
+/* Custom checkbox/radio */
+.custom-control {
+    padding-left: 0;
+    padding-right: 1.5rem;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+    left: auto;
+    right: -1.5rem;
+}
+
+/* Bootstrap 4 custom file: avoid Browse strip overlapping RTL filename text */
+[dir="rtl"] .custom-file-label {
+    direction: rtl;
+    text-align: right;
+    padding-inline-start: 0.75rem;
+    padding-inline-end: 7rem;
+}
+
+[dir="rtl"] .custom-file-label::after {
+    left: 0;
+    right: auto;
+    border-radius: 0.25rem 0 0 0.25rem;
+    border-left: none;
+    border-right: 1px solid #ced4da;
+}

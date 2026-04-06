@@ -1,0 +1,112 @@
+/* ===================================================
+   AdminLTE-rtl.min.css
+   AdminLTE RTL overrides — sidebar, navbar, content
+   =================================================== */
+
+/* Sidebar: force to RIGHT side */
+.main-sidebar,
+.main-sidebar::before {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* Content: margin-right instead of margin-left */
+.content-wrapper {
+    margin-left: 0 !important;
+    margin-right: 250px;
+    transition: margin-right .3s ease-in-out;
+}
+
+.main-header {
+    margin-left: 0 !important;
+    margin-right: 250px;
+}
+
+.main-footer {
+    margin-left: 0 !important;
+    margin-right: 250px;
+    transition: margin-right .3s ease-in-out;
+}
+
+/* Sidebar collapse */
+body.sidebar-closed .main-sidebar {
+    transform: translateX(250px) !important;
+}
+
+body.sidebar-closed .content-wrapper,
+body.sidebar-closed .main-header,
+body.sidebar-closed .main-footer {
+    margin-right: 0 !important;
+}
+
+/* Sidebar mini collapse */
+body.sidebar-collapse .main-sidebar {
+    margin-right: -250px;
+}
+
+body.sidebar-collapse .content-wrapper,
+body.sidebar-collapse .main-header,
+body.sidebar-collapse .main-footer {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* Fix inherited mini-sidebar left offset in RTL */
+body.sidebar-mini.sidebar-collapse .content-wrapper,
+body.sidebar-mini.sidebar-collapse .main-header,
+body.sidebar-mini.sidebar-collapse .main-footer {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Tablet/mobile: use overlay sidebar and full-width content */
+@media (max-width: 991.98px) {
+    .content-wrapper,
+    .main-header,
+    .main-footer {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .main-sidebar,
+    .main-sidebar::before {
+        margin-right: -250px !important;
+        margin-left: 0 !important;
+    }
+
+    body.sidebar-open .main-sidebar,
+    body.sidebar-open .main-sidebar::before {
+        margin-right: 0 !important;
+    }
+}
+
+/* Nav sidebar */
+.nav-sidebar .nav-link p {
+    text-align: right;
+}
+
+.nav-sidebar .nav-icon {
+    margin-left: 0.2rem;
+    margin-right: 0;
+}
+
+.nav-sidebar .nav-treeview .nav-link {
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+/* User panel */
+.user-panel .info {
+    text-align: right;
+}
+
+/* Sidebar search */
+.sidebar-search .input-group {
+    direction: rtl;
+}
+
+/* Control sidebar */
+.control-sidebar {
+    left: 0;
+    right: auto;
+}
